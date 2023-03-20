@@ -39,3 +39,24 @@ AddButton.addEventListener('click', (() => {
     }
   });
 }));
+
+// Preserving data
+
+const inputFields = [
+  title,
+  author,
+];
+
+inputFields.forEach((item) => {
+  item.addEventListener('input', () => {
+    const data = {
+      title: title.value,
+      author: author.value,
+    };
+    localStorage.setItem('client-data', JSON.stringify(data));
+  });
+});
+
+const dataSaved = JSON.parse(localStorage.getItem('client-data'));
+title.value = dataSaved.title;
+author.value = dataSaved.author;
