@@ -101,9 +101,11 @@ Get a hosting website and give all of the github files
 - Twitter: [@hasnatking1947](https://twitter.com/hasnatking1947)
 - LinkedIn: [Hasnat ali](https://www.linkedin.com/feed/?trk=homepage-basic_google-sign-in-submit)
 
-👤 Aimable BANCUNGUYE
+👤**Mercy Mugambi**
 
--Github: [@githubhandle](https://github.com/BANCUNGUYE66)
+- Github: [@mercymugambi](https://github.com/mercymugambi)
+- Twitter: [@mercymugambi](https://twitter.com/mercymugambi15)
+- Linkedin: [mercy mugambi](https://www.linkedin.com/in/mercymugambi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
