@@ -45,7 +45,7 @@ HTML | CSS
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> <a href="https://hasnatali1947.github.io/Portfolio/" >Visit</a>
+> <a href="" >Visit</a>
 
 <!-- GETTING STARTED -->
 
@@ -55,7 +55,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project you needs:
 
 A GitHub | A code editor | A web browser
 
