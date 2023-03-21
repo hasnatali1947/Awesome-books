@@ -22,8 +22,7 @@ function displayBooks() {
   container.innerHTML = '';
   bookList.books.forEach((books, index) => {
     container.innerHTML += `<ul>
-    <li>${books.title}</li>
-    <li>${books.author}</li>
+    <li>"${books.title}" by ${books.author}</li>
     <li><button class = "remove" onlick= "removebook()" data-index="${index}">Remove</button></li>
     </ul>`;
   });

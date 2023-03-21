@@ -11,7 +11,7 @@ ul {
   flex-direction: row;
   border-bottom: 1px solid black;
   justify-content: space-between;
-    align-items: center;
+  align-items: center;
 }
 
 ul li {
@@ -39,6 +39,12 @@ input {
   color: black;
 }
 
+.border-line {
+  margin-top: 30px;
+  border: 1px solid rgb(53, 51, 51);
+  width: 15%;
+}
+
 .main-container {
   display: flex;
   align-items: center;
@@ -60,18 +66,23 @@ input {
 .inputs {
   margin-top: 30px;
   width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .form-values {
   width: 100%;
 }
 
-.form-values .input-container{
+.form-values .input-container {
   border: 2px solid black;
   width: 100%;
+  height: 6vh;
 }
 
-.form-values .btn, .remove {
+.form-values .btn,
+.remove {
   align-self: flex-end;
   padding: 8px 20px;
   font-size: 17px;
@@ -79,7 +90,3 @@ input {
   box-shadow: 5px 7px 5px rgb(0 0 0);
   transition: box-shadow 0.2s;
 }
-
-
-
-
