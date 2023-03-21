@@ -65,7 +65,7 @@ Install all project dependencies by running the command below
 
   `$ npm install`
 
-And run `npm start` to launch the project.
+And run `npm start` to launch the project .
 
 ### Setup
 
