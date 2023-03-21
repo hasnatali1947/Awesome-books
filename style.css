@@ -89,4 +89,5 @@ input {
   border: 2px solid black;
   box-shadow: 5px 7px 5px rgb(0 0 0);
   transition: box-shadow 0.2s;
+  cursor: pointer;
 }
