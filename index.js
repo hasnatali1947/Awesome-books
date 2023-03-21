@@ -1,62 +1,44 @@
-const form = document.getElementById('form');
-const AddButton = document.getElementById('AddButton');
-const author = document.getElementById('Author');
-const todoList = document.getElementById('todoList');
-const title = document.getElementById('title');
+const container = document.querySelector('.collection');
+const BookName = document.querySelector('#book');
+const authorName = document.querySelector('#author');
+const btn = document.querySelector('form');
 
-form.addEventListener('click', ((e) => {
-  e.preventDefault();
-}));
+const bookList = JSON.parse(localStorage.getItem('book-list')) || [];
+function addBook() {
+  const title = BookName.value;
+  const author = authorName.value;
+  const books = {
+    title,
+    author,
+  };
+  bookList.push(books);
+  localStorage.setItem('book-list', JSON.stringify(bookList));
+}
+btn.addEventListener('submit', addBook);
 
-AddButton.addEventListener('click', (() => {
-  if (title.value === '' && author.value === '') {
-    alert('please fill all inputs');
-  } else {
-    const bookList = document.createElement('ul');
-    bookList.classList.add('BookListul');
+// display book
+function displayBlock() {
+  container.innerHTML = '';
+  bookList.forEach((book, index) => {
+    container.innerHTML += `<ul class="Books">
+    <li>${book.title}</li>
+    <li>${book.author}</li>
+    <li><button class = "remove" onlick= "remove()" data-index="${index}">Remove</button></li>
+    </ul>`;
+  });
+}
 
-    const Titleli = document.createElement('li');
-    Titleli.innerHTML = title.value;
-    title.value = '';
-    bookList.appendChild(Titleli);
+// remove function
+function remove(index) {
+  bookList.splice(index, 1);
+  localStorage.setItem('book-list', JSON.stringify(bookList));
+  displayBlock();
+}
+displayBlock();
 
-    const authorli = document.createElement('li');
-    authorli.innerHTML = author.value;
-    author.value = '';
-    bookList.appendChild(authorli);
-
-    const RemoveButton = document.createElement('button');
-    RemoveButton.classList.add('RemoveButton');
-    RemoveButton.innerText = 'Remove';
-
-    todoList.appendChild(bookList);
-    bookList.appendChild(RemoveButton);
+container.addEventListener('click', (e) => {
+  if (e.target.tagName === 'BUTTON') {
+    const index = e.target.getAttribute('data-index');
+    remove(index);
   }
-
-  document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('RemoveButton')) {
-      e.target.parentElement.remove();
-    }
-  });
-}));
-
-// Preserving data
-
-const inputFields = [
-  title,
-  author,
-];
-
-inputFields.forEach((item) => {
-  item.addEventListener('input', () => {
-    const data = {
-      title: title.value,
-      author: author.value,
-    };
-    localStorage.setItem('client-data', JSON.stringify(data));
-  });
 });
-
-const dataSaved = JSON.parse(localStorage.getItem('client-data'));
-title.value = dataSaved.title;
-author.value = dataSaved.author;
