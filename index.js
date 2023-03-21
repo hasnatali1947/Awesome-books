@@ -1,44 +1,46 @@
+import Books from './script/classes.js';
+
 const container = document.querySelector('.collection');
 const BookName = document.querySelector('#book');
 const authorName = document.querySelector('#author');
 const btn = document.querySelector('form');
 
-const bookList = JSON.parse(localStorage.getItem('book-list')) || [];
+const bookList = new Books();
+bookList.books = JSON.parse(localStorage.getItem('book-list')) || [];
+
 function addBook() {
   const title = BookName.value;
   const author = authorName.value;
-  const books = {
-    title,
-    author,
-  };
-  bookList.push(books);
-  localStorage.setItem('book-list', JSON.stringify(bookList));
+  bookList.add(title, author);
+  localStorage.setItem('book-list', JSON.stringify(bookList.books));
 }
 btn.addEventListener('submit', addBook);
 
-// display book
-function displayBlock() {
+// display books
+
+function displayBooks() {
   container.innerHTML = '';
-  bookList.forEach((book, index) => {
-    container.innerHTML += `<ul class="Books">
-    <li>${book.title}</li>
-    <li>${book.author}</li>
-    <li><button class = "remove" onlick= "remove()" data-index="${index}">Remove</button></li>
+  bookList.books.forEach((books, index) => {
+    container.innerHTML += `<ul>
+    <li>${books.title}</li>
+    <li>${books.author}</li>
+    <li><button class = "remove" onlick= "removebook()" data-index="${index}">Remove</button></li>
     </ul>`;
   });
 }
 
-// remove function
-function remove(index) {
-  bookList.splice(index, 1);
-  localStorage.setItem('book-list', JSON.stringify(bookList));
-  displayBlock();
+// remove button////
+
+function removebook(index) {
+  bookList.remove(index);
+  localStorage.setItem('book-list', JSON.stringify(bookList.books));
+  displayBooks();
 }
-displayBlock();
+displayBooks();
 
 container.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON') {
     const index = e.target.getAttribute('data-index');
-    remove(index);
+    removebook(index);
   }
 });
