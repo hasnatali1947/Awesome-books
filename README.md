@@ -22,7 +22,7 @@
 
 # 📖 Awesome-books <a name="about-project"></a>
 
-This is my Awesome-books Project. In which , all of books details are available.
+This is my Awesome-books Project. In which,all of books details are available.
 
 ## 🛠️ Built With <a name="built-with"></a>
 
