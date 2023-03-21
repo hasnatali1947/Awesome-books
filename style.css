@@ -32,39 +32,3 @@ input {
   height: 3.5vh;
   text-indent: 5px;
 }
-
-
-
-
-/*
-#upperDiv {
-  border: 2px solid red;
-  height: 100%;
-  width: 100%;
-}
-
-#todoList {
-  display: flex;
-  flex-direction: column;
-}
-
-.BookListul {
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-  list-style: none;
-  border-bottom: 1px solid;
-  padding-bottom: 20px;
-}
-
-.RemoveButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3.5vh;
-  width: 8vh;
-  background-color: rgba(210, 38, 29, 0.91);
-  color: white;
-  cursor: pointer;
-  border: none;
-} */
