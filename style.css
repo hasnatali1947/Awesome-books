@@ -261,7 +261,7 @@ input:focus {
 
 .timeDate {
   position: absolute;
-  top: 90px;
-  right: 68px;
+  top: 100px;
+  right: 80px;
   font-size: 20px;
 }

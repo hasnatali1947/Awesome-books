@@ -20,15 +20,15 @@
   - [❓ FAQ (OPTIONAL)](#faq)
   - [📝 License ](#-license-)
 
-# 📖 Awesome-books <a name="about-project"></a>
+# 📖 [Awesome Book Project] <a name="about-project"></a>
 
-This is my Awesome-books Project. In which,all of books details are available.
+> Discover an amazing collection of books on our website! Easily store your favorite reads with author names and enjoy seamless access to a vast library of literature. Get started now!
 
 ## 🛠️ Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-HTML | CSS 
+> HTML , CSS and Javascript
 
 <!-- Features -->
 
@@ -45,7 +45,7 @@ HTML | CSS
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> <a href="" >Visit</a>
+> <a href="https://hasnatali1947.github.io/Awesome-books/" >Visit</a>
 
 <!-- GETTING STARTED -->
 
@@ -71,7 +71,7 @@ And run `npm start` to launch the project .
 
 Clone this repository to your desired folder:
 
-  `git clone https://github.com/hasnatali1947/Portfolio.git`
+  `git clone https://github.com/hasnatali1947/Awesome-books.git`
 
 ### Usage
 
@@ -113,8 +113,7 @@ Get a hosting website and give all of the github files
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Adding work popups
-> Adding functionality to about section
+> Would be adding contact page and css styling
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,7 +121,9 @@ Get a hosting website and give all of the github files
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Feel free to check [issues page](https://github.com/hasnatali1947/Portfolio/issues).
+All issues are welcomed !! You can contribute by creating an issue.
+
+<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
