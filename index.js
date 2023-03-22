@@ -6,7 +6,6 @@ const BookName = document.querySelector('#book');
 const authorName = document.querySelector('#author');
 const btn = document.querySelector('form');
 
-
 const bookList = new Books();
 bookList.books = JSON.parse(localStorage.getItem('book-list')) || [];
 
@@ -46,6 +45,4 @@ container.addEventListener('click', (e) => {
   }
 });
 
-
-//////////Sections////////
-
+/// ///////Sections////////
