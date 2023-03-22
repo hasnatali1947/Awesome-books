@@ -40,7 +40,8 @@ header nav {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  border: 2px solid;
+  border-radius: 7px;
+  box-shadow: var(--Box-shadow-outside);
   width: 90%;
   padding: 10px 10px 10px 10px;
 }
@@ -145,13 +146,25 @@ input:focus {
   top: 100px;
 }
 
+.collection-container {
+  width: 70%;
+  box-shadow: var(--Box-shadow-outside);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+}
+
 .collection {
-  border: 2px solid black;
-  width: 50%;
+  border-radius: 7px;
+  box-shadow: 1px 2px 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .collection ul:nth-child(odd) {
-  background-color: grey;
+  background-color: rgb(243, 239, 239);
 }
 
 .inputs {
@@ -204,7 +217,7 @@ input:focus {
 }
 
 .remove {
-  width: 10vh;
+  width: 12vh;
   height: 4vh;
   cursor: pointer;
   background-color: #ff5c5c;
@@ -244,4 +257,11 @@ input:focus {
   font-size: 19px;
   margin-top: 3vh;
   height: 20vh;
+}
+
+.timeDate {
+  position: absolute;
+  top: 90px;
+  right: 68px;
+  font-size: 20px;
 }
