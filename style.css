@@ -1,21 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --font-family: 'Poppins', sans-serif;
+  --font-family-styled: 'Sacramento', cursive;
+  --Box-shadow-outside: -5px -5px 20px rgba(255, 255, 255, 0.849), 5px 5px 9px rgba(94, 104, 121, 0.3);
+  --Box-shadow-inside: inset -5px -5px 9px rgba(255, 255, 255, 0.647), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  border: 2px solid;
+  width: 90%;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav-h1 {
+  font-size: 28px;
+}
+
+ul li {
+  padding: 5px 20px;
+}
+
+.nav-ul li {
+  margin: 0 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.217), inset 0 0 10px rgba(0, 0, 0, 0);
+  padding: 5px 15px;
+  font-weight: 600;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-ul li:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.002), inset 0 0 10px rgba(0, 0, 0, 0.105);
+}
+
+.listclass {
+  background-color: rgb(53, 137, 255);
+  color: white;
+}
+
+.AddnewClass {
+  background-color: rgb(87, 255, 35);
+  color: white;
+}
+
+.contactClass {
+  background-color: rgb(95, 95, 95);
+  color: white;
 }
 
 ul {
   list-style: none;
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid black;
   justify-content: space-between;
   align-items: center;
-}
-
-ul li {
-  padding: 5px 20px;
 }
 
 section {
@@ -30,22 +102,41 @@ form {
 }
 
 input {
-  width: 20%;
-  height: 3.5vh;
-  text-indent: 5px;
+  outline: none;
+  padding: 7px 20px;
+  font-size: 16px;
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.085);
+  margin-bottom: 15px;
+  border: 2px solid rgba(86, 255, 35, 0);
+  transition: 0.3s ease-in-out;
 }
 
-.All-books {
-  color: black;
+input:focus {
+  border: 2px solid rgb(87, 255, 35);
+}
+
+.heading-AwesomeBooks {
+  font-family: var(--font-family-styled);
+  font-size: 60px;
+  color: rgb(35, 35, 35);
+  padding-bottom: 40px;
 }
 
 .border-line {
   margin-top: 30px;
-  border: 1px solid rgb(53, 51, 51);
+  border: 1px solid rgba(53, 51, 51, 0.896);
   width: 15%;
 }
 
-.main-container {
+#ListSection {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+.AddNew-Section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,22 +163,85 @@ input {
 }
 
 .form-values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  box-shadow: 1px 2px 3px;
+  padding: 20px 20px;
+}
+
+.form-values div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: none;
 }
 
 .form-values .input-container {
   border: 2px solid black;
-  width: 100%;
+  width: 50vh;
   height: 6vh;
 }
 
-.form-values .btn,
-.remove {
-  align-self: flex-end;
-  padding: 8px 20px;
-  font-size: 17px;
-  border: 2px solid black;
-  box-shadow: 5px 7px 5px rgb(0 0 0);
-  transition: box-shadow 0.2s;
+.btn {
+  width: 10vh;
+  height: 4vh;
   cursor: pointer;
+  background-color: rgb(87, 255, 35);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: rgba(248, 246, 246, 0.967);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(50, 215, 0);
+}
+
+.remove {
+  width: 10vh;
+  height: 4vh;
+  cursor: pointer;
+  background-color: #ff5c5c;
+  box-shadow: 0 0 10px #ff5c5c;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: rgba(248, 246, 246, 0.967);
+  transition: 0.3s;
+}
+
+.remove:hover {
+  background-color: #ff2727;
+}
+
+.ContactSection {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15vh;
+}
+
+.contactDiv {
+  margin-top: 5vh;
+  padding: 20px 40px;
+  height: 40vh;
+  box-shadow: 1px 2px 3px;
+}
+
+.contactDiv h3 {
+  font-size: 20px;
+}
+
+.spanDiv {
+  font-weight: 500;
+  font-size: 19px;
+  margin-top: 3vh;
+  height: 20vh;
 }

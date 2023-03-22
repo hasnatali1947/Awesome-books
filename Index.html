@@ -9,21 +9,52 @@
 </head>
 <body>
       
-    <section class="main-container">
-        <h1 class="All-books">All awesome books</h1>
-            <div class="collection">
-            </div>
-            <div class="border-line"></div>
+    <header>
+        <nav>
+            <h2 class="nav-h1">
+                Awesome books
+            </h2>
+            <ul class="nav-ul">
+                <li id="List">List</li>
+                <li id="AddNew" >Add new</li>
+                <li id="Contact">Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="ListSection">
+        <h1 class="heading-AwesomeBooks">All awesome books</h1>
+        <div class="collection">
+        </div>
+    </section>
+
+    <section class="AddNew-Section" id="AddNewSection">
+        <h2 class="heading-AwesomeBooks">Add new books</h2>       
         <div class="inputs">
-            <h2>Add a new book</h2>
             <form action="" class="form-values">
-                <input type="text" class="input-container" name="book" id="book" placeholder="Title" required>
-                <input type="text" class="input-container" name="author" id="author" placeholder="Author" required>
-                <button type="submit" name="" class="btn" id="submit">Add</button>
+                <div>
+                    <input type="text" class="input-container" name="book" id="book" placeholder="Title" required> <br>
+                    <input type="text" class="input-container" name="author" id="author" placeholder="Author" required> <br>
+                    <button type="submit" name="" class="btn" id="submit">Add</button>
+                </div>
             </form>
         </div>
     </section>   
     
+    <section class="ContactSection" id="ContactSection">
+        <h2 class="heading-AwesomeBooks">Contact Information</h2>
+        <div class="contactDiv">
+            <h3>Do you have any questions or you just want to say "Hello"? <br>
+            You can reach out to us!
+            </h3>
+            <div class="spanDiv">
+                <span class="name">Hasnat Ali</span> <br>
+                <span class="email">Hasnatking1947@gmail.com</span> <br>
+                <span class="number">+92-3152323402</span>
+            </div>
+        </div>
+    </section>
+
 </body>
 <script type="module" src="index.js"></script>
 </html>

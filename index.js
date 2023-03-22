@@ -1,9 +1,11 @@
 import Books from './script/classes.js';
+import './script/NavbarButtons.js';
 
 const container = document.querySelector('.collection');
 const BookName = document.querySelector('#book');
 const authorName = document.querySelector('#author');
 const btn = document.querySelector('form');
+
 
 const bookList = new Books();
 bookList.books = JSON.parse(localStorage.getItem('book-list')) || [];
@@ -43,3 +45,7 @@ container.addEventListener('click', (e) => {
     removebook(index);
   }
 });
+
+
+//////////Sections////////
+
