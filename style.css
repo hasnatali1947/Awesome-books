@@ -258,6 +258,10 @@ input:focus {
   height: 40vh;
   width: 90vw;
   max-width: 800px;
+  margin-top: 5vh;
+  padding: 20px 40px;
+  height: 50vh;
+  box-shadow: 1px 2px 3px;
 }
 
 .contactDiv h3 {
