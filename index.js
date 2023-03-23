@@ -1,9 +1,13 @@
 import Books from './script/classes.js';
+import './script/NavbarButtons.js';
+import { DateTime } from './script/timeDate.js';
 
 const container = document.querySelector('.collection');
 const BookName = document.querySelector('#book');
 const authorName = document.querySelector('#author');
 const btn = document.querySelector('form');
+
+const timeDate = document.getElementById('timeDate');
 
 const bookList = new Books();
 bookList.books = JSON.parse(localStorage.getItem('book-list')) || [];
@@ -15,6 +19,11 @@ function addBook() {
   localStorage.setItem('book-list', JSON.stringify(bookList.books));
 }
 btn.addEventListener('submit', addBook);
+
+const currentTime = () => {
+  const now = DateTime.now();
+  return now.toLocaleString({ ...DateTime.DATETIME_MED_WITH_SECONDS, hour12: true });
+};
 
 // display books
 
@@ -43,3 +52,9 @@ container.addEventListener('click', (e) => {
     removebook(index);
   }
 });
+
+// ---------------- Set time ---------------
+
+setInterval(() => {
+  timeDate.innerHTML = currentTime();
+}, [1000]);
