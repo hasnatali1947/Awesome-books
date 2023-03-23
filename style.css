@@ -4,8 +4,13 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  justify-content: space-between;
+  background-color: #ececec;
+  max-height: 100vh;
 }
 
 :root {
@@ -33,17 +38,18 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 2vh;
+  position: relative;
 }
 
 header nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
   border-radius: 7px;
   box-shadow: var(--Box-shadow-outside);
-  width: 90%;
-  padding: 10px 10px 10px 10px;
+  width: 95%;
+  padding: 10px;
 }
 
 .nav-h1 {
@@ -91,10 +97,6 @@ ul {
   align-items: center;
 }
 
-section {
-  padding: 10px 20px;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -104,7 +106,7 @@ form {
 
 input {
   outline: none;
-  padding: 7px 20px;
+  padding: 7px 15px;
   font-size: 16px;
   border-radius: 7px;
   background-color: rgba(0, 0, 0, 0.085);
@@ -117,11 +119,19 @@ input:focus {
   border: 2px solid rgb(87, 255, 35);
 }
 
+.heading-AddnewBooks {
+  font-family: var(--font-family-styled);
+  font-size: 60px;
+  color: rgb(35, 35, 35);
+  padding-bottom: 40px;
+}
+
 .heading-AwesomeBooks {
   font-family: var(--font-family-styled);
   font-size: 60px;
   color: rgb(35, 35, 35);
   padding-bottom: 40px;
+  margin-top: 10vh;
 }
 
 .border-line {
@@ -134,7 +144,8 @@ input:focus {
   display: none;
   align-items: center;
   flex-direction: column;
-  margin-top: 5vh;
+  height: 83.6vh;
+  width: 100%;
 }
 
 .AddNew-Section {
@@ -143,7 +154,7 @@ input:focus {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  top: 100px;
+  height: 83.6vh;
 }
 
 .collection-container {
@@ -195,7 +206,7 @@ input:focus {
 
 .form-values .input-container {
   border: 2px solid black;
-  width: 50vh;
+  width: 90%;
   height: 6vh;
 }
 
@@ -238,30 +249,39 @@ input:focus {
   display: none;
   align-items: center;
   flex-direction: column;
-  margin-top: 15vh;
+  height: 83.6vh;
 }
 
 .contactDiv {
-  margin-top: 5vh;
-  padding: 20px 40px;
+  box-shadow: var(--Box-shadow-outside);
+  text-align: start;
   height: 40vh;
-  box-shadow: 1px 2px 3px;
+  width: 90vw;
+  max-width: 800px;
 }
 
 .contactDiv h3 {
   font-size: 20px;
+  margin: 3vh;
 }
 
 .spanDiv {
   font-weight: 500;
   font-size: 19px;
-  margin-top: 3vh;
+  margin: 3vh;
   height: 20vh;
 }
 
 .timeDate {
   position: absolute;
-  top: 100px;
-  right: 80px;
+  top: 90px;
+  right: 45px;
   font-size: 20px;
+}
+
+footer {
+  width: calc(100% - 40px);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.878);
+  color: white;
 }
