@@ -175,7 +175,7 @@ input:focus {
 }
 
 .collection ul:nth-child(odd) {
-  background-color: rgb(243, 239, 239);
+  background-color: rgb(230, 230, 230);
 }
 
 .inputs {
@@ -207,7 +207,7 @@ input:focus {
 .form-values .input-container {
   border: 2px solid black;
   width: 90%;
-  height: 6vh;
+  height: 4vh;
 }
 
 .btn {
@@ -253,14 +253,18 @@ input:focus {
 }
 
 .contactDiv {
+  display: flex;
   box-shadow: var(--Box-shadow-outside);
   text-align: start;
   height: 40vh;
   width: 90vw;
   max-width: 800px;
   margin-top: 5vh;
-  padding: 20px 40px;
-  margin-bottom: 10vh;
+}
+
+.contactinnerdiv {
+  display: flex;
+  flex-direction: column;
 }
 
 .contactDiv h3 {
@@ -287,4 +291,18 @@ footer {
   padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.878);
   color: white;
+}
+
+.image {
+  width: 30%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url('./Image/hasnatimg.JPG');
+  border-radius: 0 7px 7px 0;
+}
+
+img {
+  height: 50vh;
+  width: 50vh;
 }

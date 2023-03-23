@@ -40,7 +40,6 @@ function displayBooks() {
 // remove button////
 
 function removebook(index) {
-  timeDate.innerHTML = currentTime();
   bookList.remove(index);
   localStorage.setItem('book-list', JSON.stringify(bookList.books));
   displayBooks();
@@ -59,4 +58,3 @@ container.addEventListener('click', (e) => {
 setInterval(() => {
   timeDate.innerHTML = currentTime();
 }, [1000]);
-/// ///////Sections////////
