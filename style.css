@@ -53,7 +53,9 @@ header nav {
 }
 
 .nav-h1 {
-  font-size: 28px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 20px;
 }
 
 ul li {
@@ -121,17 +123,21 @@ input:focus {
 
 .heading-AddnewBooks {
   font-family: var(--font-family-styled);
-  font-size: 60px;
+  font-size: 70px;
   color: rgb(35, 35, 35);
   padding-bottom: 40px;
+  opacity: 0.7;
+  animation: text-loads 1.5s ease-in-out;
 }
 
 .heading-AwesomeBooks {
   font-family: var(--font-family-styled);
-  font-size: 60px;
+  font-size: 70px;
   color: rgb(35, 35, 35);
   padding-bottom: 40px;
   margin-top: 10vh;
+  opacity: 0.7;
+  animation: text-loads 1.5s ease-in-out;
 }
 
 .border-line {
@@ -307,4 +313,20 @@ footer {
 img {
   height: 50vh;
   width: 50vh;
+}
+
+@keyframes text-loads {
+  0% {
+    opacity: 0;
+    letter-spacing: 8px;
+  }
+
+  80% {
+    letter-spacing: 4px;
+  }
+
+  100% {
+    letter-spacing: 0;
+    opacity: 0.7;
+  }
 }
