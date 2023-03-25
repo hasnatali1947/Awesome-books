@@ -175,14 +175,15 @@ input:focus {
 
 .collection {
   border-radius: 7px;
-  box-shadow: 1px 2px 5px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--Box-shadow-outside);
 }
 
 .collection ul:nth-child(odd) {
   background-color: rgb(230, 230, 230);
+  border-radius: 10px;
 }
 
 .inputs {
@@ -213,9 +214,9 @@ input:focus {
 }
 
 .form-values .input-container {
-  border: 2px solid black;
   width: 90%;
   height: 4vh;
+  border: none;
 }
 
 .btn {
@@ -285,13 +286,15 @@ input:focus {
   font-size: 19px;
   margin: 3vh;
   height: 20vh;
+  opacity: 0.7;
 }
 
 .timeDate {
   position: absolute;
-  top: 90px;
-  right: 45px;
+  top: 80px;
+  right: 35px;
   font-size: 20px;
+  opacity: 0.7;
 }
 
 footer {
