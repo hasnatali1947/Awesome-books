@@ -1,6 +1,6 @@
-import Books from './script/classes.js';
-import './script/NavbarButtons.js';
-import { DateTime } from './script/luxon.js';
+import Books from './modules/classes.js';
+import './modules/NavbarButtons.js';
+import { DateTime } from './modules/luxon.js';
 
 const container = document.querySelector('.collection');
 const BookName = document.querySelector('#book');
