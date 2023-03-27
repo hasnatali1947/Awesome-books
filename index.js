@@ -16,7 +16,7 @@ const addBook = () => {
   const author = authorName.value;
   bookList.add(title, author);
   localStorage.setItem('book-list', JSON.stringify(bookList.books));
-}
+};
 btn.addEventListener('submit', addBook);
 
 const currentTime = () => {
@@ -34,7 +34,7 @@ const displayBooks = () => {
     <li><button class = "remove" onlick= "removebook()" data-index="${index}">Remove</button></li>
     </ul>`;
   });
-}
+};
 
 // remove button////
 
@@ -42,7 +42,7 @@ const removebook = (index) => {
   bookList.remove(index);
   localStorage.setItem('book-list', JSON.stringify(bookList.books));
   displayBooks();
-}
+};
 displayBooks();
 
 container.addEventListener('click', (e) => {
