@@ -1,12 +1,11 @@
 import Books from './script/classes.js';
 import './script/NavbarButtons.js';
-import { DateTime } from './script/timeDate.js';
+import { DateTime } from './script/luxon.js';
 
 const container = document.querySelector('.collection');
 const BookName = document.querySelector('#book');
 const authorName = document.querySelector('#author');
 const btn = document.querySelector('form');
-
 const timeDate = document.getElementById('timeDate');
 
 const bookList = new Books();
@@ -17,7 +16,7 @@ const addBook = () => {
   const author = authorName.value;
   bookList.add(title, author);
   localStorage.setItem('book-list', JSON.stringify(bookList.books));
-};
+}
 btn.addEventListener('submit', addBook);
 
 const currentTime = () => {
@@ -35,7 +34,7 @@ const displayBooks = () => {
     <li><button class = "remove" onlick= "removebook()" data-index="${index}">Remove</button></li>
     </ul>`;
   });
-};
+}
 
 // remove button////
 
@@ -43,7 +42,7 @@ const removebook = (index) => {
   bookList.remove(index);
   localStorage.setItem('book-list', JSON.stringify(bookList.books));
   displayBooks();
-};
+}
 displayBooks();
 
 container.addEventListener('click', (e) => {
