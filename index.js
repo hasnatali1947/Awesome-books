@@ -12,12 +12,12 @@ const timeDate = document.getElementById('timeDate');
 const bookList = new Books();
 bookList.books = JSON.parse(localStorage.getItem('book-list')) || [];
 
-function addBook() {
+const addBook = () => {
   const title = BookName.value;
   const author = authorName.value;
   bookList.add(title, author);
   localStorage.setItem('book-list', JSON.stringify(bookList.books));
-}
+};
 btn.addEventListener('submit', addBook);
 
 const currentTime = () => {
@@ -27,7 +27,7 @@ const currentTime = () => {
 
 // display books
 
-function displayBooks() {
+const displayBooks = () => {
   container.innerHTML = '';
   bookList.books.forEach((books, index) => {
     container.innerHTML += `<ul>
@@ -35,15 +35,15 @@ function displayBooks() {
     <li><button class = "remove" onlick= "removebook()" data-index="${index}">Remove</button></li>
     </ul>`;
   });
-}
+};
 
 // remove button////
 
-function removebook(index) {
+const removebook = (index) => {
   bookList.remove(index);
   localStorage.setItem('book-list', JSON.stringify(bookList.books));
   displayBooks();
-}
+};
 displayBooks();
 
 container.addEventListener('click', (e) => {
