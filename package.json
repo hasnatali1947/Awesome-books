@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hasnatali1947/Hello-microverse#readme",
   "devDependencies": {
+    "@types/luxon": "^3.2.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
