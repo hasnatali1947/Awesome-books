@@ -298,10 +298,12 @@ input:focus {
 }
 
 footer {
+  position: fixed;
   width: calc(100% - 40px);
   padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.878);
   color: white;
+  bottom: 0;
 }
 
 .image {
