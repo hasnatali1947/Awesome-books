@@ -45,7 +45,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> <a href="https://hasnatali1947.github.io/Awesome-books/" >Visit</a>
+> <a href="https://hasnatali1947.github.io/Awesome-books/dist" >Visit</a>
 
 <!-- GETTING STARTED -->
 
